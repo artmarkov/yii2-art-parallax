@@ -1,12 +1,14 @@
 <?php
 
 namespace artsoft\parallax\controllers;
+
 use Yii;
+use artsoft\controllers\admin\BaseController;
 
 /**
  * CarouselController implements the CRUD actions for artsoft\models\Parallax model.
  */
-class DefaultController extends \backend\controllers\DefaultController 
+class DefaultController extends BaseController 
 {
    public $modelClass       = 'artsoft\parallax\models\Parallax';
     public $modelSearchClass = 'artsoft\parallax\models\search\ParallaxSearch';
