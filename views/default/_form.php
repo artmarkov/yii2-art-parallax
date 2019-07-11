@@ -5,7 +5,6 @@ use artsoft\parallax\models\Parallax;
 use artsoft\helpers\Html;
 use kartik\color\ColorInput;
 use kartik\switchinput\SwitchInput;
-use artsoft\media\widgets\TinyMce;
 
 /* @var $this yii\web\View */
 /* @var $model artsoft\parallax\models\Parallax */
@@ -41,7 +40,12 @@ use artsoft\media\widgets\TinyMce;
 
                     <?= $form->field($model, 'background_ratio')->textInput(['maxlength' => true]) ?>
 
-                    <?= $form->field($model, 'content')->widget(TinyMce::class); ?>
+                    <?= $form->field($model, 'content')->widget(trntv\aceeditor\AceEditor::class,
+                            [
+                                'mode' => 'html',
+                                'theme' => 'sqlserver', //chrome,clouds,clouds_midnight,cobalt,crimson_editor,dawn,dracula,dreamweaver,eclipse,iplastic
+                                                        //merbivore,merbivore_soft,sqlserver,terminal,tomorrow_night,twilight,xcode
+                            ]) ?>
 
                 </div>
 
