@@ -83,6 +83,7 @@ class Parallax extends ActiveRecord implements OwnerAccess
     {
         return [
             [['bg_image', 'parallax_class', 'background_ratio', 'content', 'name'], 'required'],
+            ['slug', 'required', 'enableClientValidation' => false],
             [['content', 'slug'], 'string'],
             [['content'], 'trim'],
             [['start_timestamp'], 'safe'],
